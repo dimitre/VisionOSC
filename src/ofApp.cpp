@@ -15,9 +15,11 @@ void ofApp::setup(){
   gui.loadFromFile("settings.xml");
   
   cam.setDeviceID(cam_id);
-  cam.initGrabber(cam_w,cam_h);
+  cam.setup(cam_w,cam_h);
   
   sender.setup(osc_host.get(), osc_port.get());
+	
+	ofSetFrameRate(30);
 }
 
 //--------------------------------------------------------------
